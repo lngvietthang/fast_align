@@ -26,8 +26,8 @@
 #include <unordered_map>
 #include <functional>
 #else // Assuming older OS X, Linux or similar platforms
-#include <tr1/unordered_map>
-#include <tr1/functional>
+#include <unordered_map>
+#include <functional>
 namespace std {
 using tr1::unordered_map;
 using tr1::hash;

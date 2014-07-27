@@ -48,9 +48,9 @@ struct DiagonalAlignment {
     double ezt = 0;
     double ezb = 0;
     if (num_top)
-      ezt = UnnormalizedProb(i, ceil, m, n, alpha) * (1.0 - pow(ratio, num_top)) / (1.0 - ratio);
+      ezt = UnnormalizedProb(i, ceil, m, n, alpha) * (1.0 - pow(ratio, (double)num_top)) / (1.0 - ratio);
     if (floor)
-      ezb = UnnormalizedProb(i, floor, m, n, alpha) * (1.0 - pow(ratio, floor)) / (1.0 - ratio);
+      ezb = UnnormalizedProb(i, floor, m, n, alpha) * (1.0 - pow(ratio, (double)floor)) / (1.0 - ratio);
     return ezb + ezt;
   }
 
@@ -81,7 +81,7 @@ struct DiagonalAlignment {
 
  private:
   inline static double arithmetico_geometric_series(const double a_1, const double g_1, const double r, const double d, const unsigned n) {
-    const double g_np1 = g_1 * pow(r, n);
+    const double g_np1 = g_1 * pow(r, (double)n);
     const double a_n = d * (n - 1) + a_1;
     const double x_1 = a_1 * g_1;
     const double g_2 = g_1 * r;

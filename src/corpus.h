@@ -7,7 +7,7 @@
 #include <fstream>
 #include <vector>
 #include <set>
-#include "src/port.h"
+#include "port.h"
 
 class Dict {
  typedef std::unordered_map<std::string, unsigned, std::hash<std::string> > Map;

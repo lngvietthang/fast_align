@@ -18,12 +18,12 @@
 #include <cmath>
 #include <utility>
 #include <fstream>
-#include <getopt.h>
+#include "getopt.h"
 
-#include "src/port.h"
-#include "src/corpus.h"
-#include "src/ttables.h"
-#include "src/da.h"
+#include "port.h"
+#include "corpus.h"
+#include "ttables.h"
+#include "da.h"
 
 using namespace std;
 
@@ -230,7 +230,7 @@ int main(int argc, char** argv) {
     }
 
     // log(e) = 1.0
-    double base2_likelihood = likelihood / log(2);
+    double base2_likelihood = likelihood / log(2.0);
 
     if (flag) { cerr << endl; }
     if (iter == 0) {
